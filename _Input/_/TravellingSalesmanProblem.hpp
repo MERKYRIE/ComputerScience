@@ -14,7 +14,7 @@ namespace NComputerScience
         std::unordered_map<std::string , std::unordered_map<std::string , std::int64_t>> FMap;
         std::string FCity;
         
-        void IInitiate()
+        void IInitiate(std::string const& ACity)
         {
             FMap["A"]["B"] = 2;
             FMap["A"]["C"] = 2;
@@ -32,7 +32,7 @@ namespace NComputerScience
             FMap["E"]["B"] = 1;
             FMap["E"]["C"] = 3;
             FMap["E"]["D"] = 3;
-            FCity = "A";
+            FCity = ACity;
             ITravel(std::make_unique<SNode>(nullptr , FCity).get());
         }
 
